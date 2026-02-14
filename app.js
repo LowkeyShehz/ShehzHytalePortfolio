@@ -40,7 +40,7 @@ const projectsData = [
     {
         id: "inspired-by-cenote",
         title: "Inspired by Cenote",
-        description: "Deep, water-filled sinkholes with lush vegetation hanging from the opening. A hidden underground paradise with crystal clear water.",
+        description: "Deep, water-filled sinkholes with lush vegetation hanging from the opening. A hidden underground paradise with crystal clear water.(Inspiration: https://media.gettyimages.com/id/1345295504/photo/woman-alone-in-a-cenote-mexico.jpg?s=2048x2048&w=gi&k=20&c=24kYUReXhWEK93YGxwh9RnGL-6x7XSjFzX2pXvsTr2A= https://st2.depositphotos.com/5797410/8438/i/600/depositphotos_84382992-stock-photo-ik-kil-cenote.jpg)",
         link: "#",
         images: [
             "assets/Cenote/Hytale2026-02-05_23-46-09.png",
