@@ -169,7 +169,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (project) {
             document.title = `${project.title} - Hytale World Designer`;
             document.getElementById('detail-title').textContent = project.title;
-            document.getElementById('detail-description').textContent = project.description;
+
+            // Format description to make links clickable
+            let linkIndex = 1;
+            const formattedDescription = project.description.replace(
+                /(https?:\/\/[^\s)]+)/g,
+                (match) => {
+                    const linkText = `Inspo Image ${linkIndex++}`;
+                    return `<a href="${match}" target="_blank" style="color: var(--forest-green); text-decoration: underline;">${linkText}</a>`;
+                }
+            );
+            document.getElementById('detail-description').innerHTML = formattedDescription;
             document.getElementById('detail-link').href = "https://x.com/LowkeyShehz";
 
             const galleryGrid = document.getElementById('gallery-grid');
