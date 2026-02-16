@@ -5,12 +5,25 @@ const projectsData = [
     {
         id: "gigantic-floating-islands",
         title: "Gigantic Floating Islands",
-        description: "Massive floating landmasses inspired by fantasy tropes. Uses custom noise generators for islands and cloud layers. Detailed volumetric clouds and waterfalls cascading into the void.",
+        description: "Massive floating landmasses inspired by fantasy tropes. Rings around the islands. generates on varying heights",
         link: "#",
         images: [
-            "assets/placeholder.jpg",
-            "assets/placeholder.jpg",
-            "assets/placeholder.jpg"
+            "assets/GiganticFloatingIslands/1.png",
+            "assets/GiganticFloatingIslands/2.png",
+            "assets/GiganticFloatingIslands/3.png",
+            "assets/GiganticFloatingIslands/4.png",
+            "assets/GiganticFloatingIslands/5.png",
+            "assets/GiganticFloatingIslands/6.png",
+            "assets/GiganticFloatingIslands/7.png",
+            "assets/GiganticFloatingIslands/8.png",
+            "assets/GiganticFloatingIslands/9.png",
+            "assets/GiganticFloatingIslands/10.png",
+            "assets/GiganticFloatingIslands/11.png",
+            "assets/GiganticFloatingIslands/12.png",
+            "assets/GiganticFloatingIslands/13.png",
+            "assets/GiganticFloatingIslands/14.png",
+            "assets/GiganticFloatingIslands/15.png",
+            "assets/GiganticFloatingIslands/16.png"
         ]
     },
     {
