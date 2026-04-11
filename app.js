@@ -151,6 +151,19 @@ const projectsData = [
             "assets/UndergroundCoral/Hytale2026-01-20_17-56-42.png",
             "assets/UndergroundCoral/Hytale2026-01-20_17-57-43.png"
         ]
+    },
+    {
+        id: "mystical-swamp-dimension",
+        title: "Mystical Swamp Dimension",
+        description: "A custom poisoned swamp biome for Hytale, featuring a surreal toxic atmosphere and ancient decay. Includes toxic environments, dynamic vegetation, and ancient landmarks like massive dinosaur bone fossils. Curseforge: https://www.curseforge.com/hytale/mods/mystical-swamp-dimension",
+        link: "https://www.curseforge.com/hytale/mods/mystical-swamp-dimension",
+        images: [
+            "assets/MysticalSwamp/hytale2026-04-08_22-37-37-png.png",
+            "assets/MysticalSwamp/hytale2026-04-10_12-21-07-png.png",
+            "assets/MysticalSwamp/hytale2026-04-10_12-26-34-png.png",
+            "assets/MysticalSwamp/hytale2026-04-10_12-28-10-png.png",
+            "assets/MysticalSwamp/hytale2026-04-10_12-31-24-png.png"
+        ]
     }
 ];
 
@@ -183,13 +196,22 @@ document.addEventListener('DOMContentLoaded', () => {
             document.title = `${project.title} - Hytale World Designer`;
             document.getElementById('detail-title').textContent = project.title;
 
-            // Format description to make links clickable
-            let linkIndex = 1;
+            // Format description to make links clickable and shortened
+            let inspoIndex = 1;
+            // This regex finds URLs and optionally identifies if they are 'Inspiration' links
             const formattedDescription = project.description.replace(
-                /(https?:\/\/[^\s)]+)/g,
-                (match) => {
-                    const linkText = `Inspo Image ${linkIndex++}`;
-                    return `<a href="${match}" target="_blank" style="color: var(--forest-green); text-decoration: underline;">${linkText}</a>`;
+                /(Inspiration|Curseforge|https?):\s*(https?:\/\/[^\s)]+)/gi,
+                (match, label, url) => {
+                    // If no explicit label was found (just the URL), 'label' will be 'http'/'https'
+                    let linkText = label;
+                    if (label.toLowerCase().startsWith('http')) {
+                        linkText = "Link";
+                    } else if (label.toLowerCase() === 'inspiration') {
+                        linkText = `Inspo Image ${inspoIndex++}`;
+                    }
+                    
+                    // Use the specific label (like Curseforge) if found, otherwise use linkText
+                    return `<a href="${url}" target="_blank" style="color: var(--forest-green); text-decoration: underline;">${linkText}</a>`;
                 }
             );
             document.getElementById('detail-description').innerHTML = formattedDescription;
