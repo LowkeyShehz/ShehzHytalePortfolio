@@ -3,6 +3,71 @@
 // Project Data source
 const projectsData = [
     {
+        id: "sapphire-reach",
+        title: "Sapphire Reach",
+        description: "(WIP) A beautiful fantasy-style biome.",
+        link: "#",
+        images: [
+            "assets/SapphireReach/Hytale2026-04-28_15-06-22.png",
+            "assets/SapphireReach/Hytale2026-04-28_15-07-23.png",
+            "assets/SapphireReach/Hytale2026-04-28_15-07-37.png",
+            "assets/SapphireReach/Hytale2026-04-28_15-09-15.png",
+            "assets/SapphireReach/Hytale2026-04-28_17-00-30.png",
+            "assets/SapphireReach/Hytale2026-04-28_17-34-00.png",
+            "assets/SapphireReach/Hytale2026-04-28_17-34-09.png",
+            "assets/SapphireReach/Hytale2026-04-28_20-42-26.png",
+            "assets/SapphireReach/Hytale2026-04-28_20-43-18.png",
+            "assets/SapphireReach/Hytale2026-04-28_20-47-06.png",
+            "assets/SapphireReach/Hytale2026-04-28_20-47-13.png"
+        ]
+    },
+    {
+        id: "oceans",
+        title: "Oceans",
+        description: "(WIP) Vast oceans.",
+        link: "#",
+        images: [
+            "assets/Oceans/Hytale2026-04-27_22-57-24.png",
+            "assets/Oceans/Hytale2026-04-27_23-16-54.png",
+            "assets/Oceans/Hytale2026-04-27_23-17-53.png",
+            "assets/Oceans/Hytale2026-04-27_23-18-53.png",
+            "assets/Oceans/Hytale2026-04-27_23-22-24.png"
+        ]
+    },
+    {
+        id: "cliff-rift",
+        title: "Cliff Rift",
+        description: "Scenic cliff rifts and canyon formations.",
+        link: "#",
+        images: [
+            "assets/CliffRift/Hytale2026-04-25_14-37-56.png",
+            "assets/CliffRift/Hytale2026-04-25_14-38-11.png",
+            "assets/CliffRift/Hytale2026-04-25_16-33-00.png",
+            "assets/CliffRift/Hytale2026-04-25_16-43-50.png",
+            "assets/CliffRift/Hytale2026-04-25_18-00-42.png",
+            "assets/CliffRift/Hytale2026-04-25_22-06-35.png",
+            "assets/CliffRift/Hytale2026-04-25_22-08-01.png",
+            "assets/CliffRift/Hytale2026-04-25_22-09-32.png",
+            "assets/CliffRift/Hytale2026-04-25_22-12-13.png",
+            "assets/CliffRift/Hytale2026-04-25_22-12-58.png",
+            "assets/CliffRift/Hytale2026-04-25_22-58-28.png",
+            "assets/CliffRift/Hytale2026-04-25_23-11-15.png",
+            "assets/CliffRift/Hytale2026-04-26_18-05-00.png",
+            "assets/CliffRift/Hytale2026-04-26_18-32-18.png",
+            "assets/CliffRift/Hytale2026-04-26_18-40-04.png",
+            "assets/CliffRift/Hytale2026-04-27_17-54-46.png",
+            "assets/CliffRift/Hytale2026-04-27_22-49-05.png",
+            "assets/CliffRift/Hytale2026-04-27_22-49-35.png",
+            "assets/CliffRift/Hytale2026-04-27_22-52-53.png",
+            "assets/CliffRift/Hytale2026-04-27_22-53-44.png",
+            "assets/CliffRift/Hytale2026-04-27_22-54-23.png",
+            "assets/CliffRift/Hytale2026-04-27_22-55-47.png",
+            "assets/CliffRift/Hytale2026-04-27_23-10-49.png",
+            "assets/CliffRift/Hytale2026-04-27_23-11-07.png",
+            "assets/CliffRift/Hytale2026-04-27_23-14-33.png"
+        ]
+    },
+    {
         id: "gigantic-floating-islands",
         title: "Gigantic Floating Islands",
         description: "Massive floating landmasses inspired by fantasy tropes. Rings around the islands. generates on varying heights",
@@ -209,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (label.toLowerCase() === 'inspiration') {
                         linkText = `Inspo Image ${inspoIndex++}`;
                     }
-                    
+
                     // Use the specific label (like Curseforge) if found, otherwise use linkText
                     return `<a href="${url}" target="_blank" style="color: var(--forest-green); text-decoration: underline;">${linkText}</a>`;
                 }
